@@ -52,7 +52,7 @@ const Portraits = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-20 overflow-hidden">
+    <section className="w-full bg-slate-50 py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 mb-12">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">

@@ -24,7 +24,7 @@ const Hero = () => {
           <div className="text-left lg:pl-8 pt-20 lg:pt-0">
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Capt. Chouhan
+              Capt. M. Chouhan
             </h1>
             
             {/* Subtitle */}
@@ -55,7 +55,7 @@ const Hero = () => {
               <Image
                 src="/images/person.png"
                 fill
-                alt="Cap Chouhan"
+                alt="Capt. M. Chouhan"
                 className="object-contain object-bottom"
                 priority
               />

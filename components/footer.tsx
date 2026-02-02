@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-900 text-white py-12">
+    <footer className="w-full bg-slate-900 text-white py-16 border-t border-slate-800">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* About Section */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Cap Chouhan</h3>
+            <h3 className="text-2xl font-bold mb-4">Capt. M. Chouhan</h3>
             <p className="text-gray-400 leading-relaxed">
               Creating meaningful content and connecting with audiences through
               authentic storytelling and creative expression.
@@ -119,7 +119,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Cap Chouhan. All rights reserved.
+            © {new Date().getFullYear()} Capt. M. Chouhan. All rights reserved.
           </p>
         </div>
       </div>

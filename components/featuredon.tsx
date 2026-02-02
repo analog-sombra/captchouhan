@@ -37,7 +37,7 @@ const FeaturedOn = () => {
   const allImages = [...leftImages, ...rightImages];
 
   return (
-    <section className="w-full bg-[#e8d9b8] py-20">
+    <section className="w-full bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-50 py-24">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -107,7 +107,7 @@ const FeaturedOn = () => {
           {/* Main Image */}
           <div className="relative w-full max-w-md mx-auto h-96 rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/bg.jpg"
+              src="/images/profile.jpg"
               fill
               alt="Featured Person"
               className="object-cover object-center"

@@ -42,7 +42,7 @@ const Navbar = () => {
               isScrolled ? "text-gray-800" : "text-white"
             }`}
           >
-            Cap Chouhan
+            Capt. M. Chouhan
           </a>
 
           {/* Desktop Navigation */}

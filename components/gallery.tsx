@@ -98,7 +98,7 @@ const Gallery = () => {
   const displayedImages = showAll ? images : images.slice(0, 6);
 
   return (
-    <section className="w-full bg-[#f8f5e4] py-20">
+    <section className="w-full bg-[#eef2ff] py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
