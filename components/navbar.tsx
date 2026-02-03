@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,12 +27,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
+    <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || isMobileMenuOpen
           ? "bg-white shadow-md py-4"
           : "bg-transparent py-6"
       }`}
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between">
@@ -39,7 +43,7 @@ const Navbar = () => {
           <a
             href="#home"
             className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? "text-gray-800" : "text-white"
+              isScrolled || isMobileMenuOpen ? "text-gray-800" : "text-white"
             }`}
           >
             Capt. M. Chouhan
@@ -47,8 +51,8 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
+            {navLinks.map((link, index) => (
+              <motion.a
                 key={link.name}
                 href={link.href}
                 className={`font-medium transition-all duration-300 hover:scale-110 ${
@@ -56,9 +60,12 @@ const Navbar = () => {
                     ? "text-gray-700 hover:text-gray-900"
                     : "text-white hover:text-gray-200"
                 }`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.2 + index * 0.05, ease: "easeOut" }}
               >
                 {link.name}
-              </a>
+              </motion.a>
             ))}
           </div>
 
@@ -66,7 +73,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`md:hidden p-2 transition-colors duration-300 ${
-              isScrolled ? "text-gray-800" : "text-white"
+              isScrolled || isMobileMenuOpen ? "text-gray-800" : "text-white"
             }`}
           >
             {isMobileMenuOpen ? (
@@ -113,11 +120,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`font-medium transition-colors duration-300 ${
-                  isScrolled
-                    ? "text-gray-700 hover:text-gray-900"
-                    : "text-white hover:text-gray-200"
-                }`}
+                className="font-medium text-gray-700 hover:text-gray-900 transition-colors duration-300"
               >
                 {link.name}
               </a>
@@ -125,7 +128,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

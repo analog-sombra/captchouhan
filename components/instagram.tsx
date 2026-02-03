@@ -1,21 +1,26 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Instagram = () => {
   const reels = [
     {
       thumbnail: "/reel/reel3.mp4",
-      title: "Creative Journey",
-      views: "125K",
+      title: "Lunch with Speaker",
+      views: "1.1M",
+      link: "https://www.instagram.com/p/DQRFdJMk8LQ/",
     },
     {
       thumbnail: "/reel/reel2.mp4",
-      title: "Behind The Scenes",
-      views: "89K",
+      title: "Koenigsegg 46 Cr Car",
+      views: "279K",
+      link: "https://www.instagram.com/p/DRBa_Eqk0Mn/",
     },
     {
       thumbnail: "/reel/reel1.mp4",
-      title: "Daily Inspiration",
-      views: "156K",
+      title: "Kartik Aryan and Ananya Pandey",
+      views: "629K",
+      link: "https://www.instagram.com/p/DRmdNgAE5kP/",
     },
   ];
 
@@ -23,21 +28,50 @@ const Instagram = () => {
     <section className="w-full bg-linear-to-b from-slate-900 to-slate-800 py-24">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-3">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <motion.h2
+            className="text-4xl font-bold text-white mb-3"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             Instagram Reels
-          </h2>
-          <p className="text-gray-300">
+          </motion.h2>
+          <motion.p
+            className="text-gray-300"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             Check out our latest reels and stories
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Reels Container */}
         <div className="flex justify-center items-center gap-6 flex-wrap">
           {reels.map((reel, index) => (
-            <div
+            <motion.a
               key={index}
+              href={reel.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative w-72 h-125 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ amount: 0.3 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
             >
               {/* Reel Image */}
               <div className="relative w-full h-full">
@@ -94,7 +128,7 @@ const Instagram = () => {
                 
               */}
               </div>
-            </div>
+            </motion.a>
           ))}
         </div>
       </div>

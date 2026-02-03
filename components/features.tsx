@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 const Features = () => {
   const features = [
     {
@@ -23,27 +26,51 @@ const Features = () => {
   return (
     <section className="w-full bg-white py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center text-gray-800">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold mb-4 text-center text-gray-800"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           Features
-        </h2>
-        <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+        </motion.h2>
+        <motion.p 
+          className="text-center text-gray-600 mb-16 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+        >
           Empowering creators with tools and insights to grow and connect
-        </p>
+        </motion.p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {features.map((feature, index) => (
-            <div 
+            <motion.div 
               key={index} 
               className="text-center space-y-4 hover:transform hover:scale-105 transition-transform duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.15, ease: "easeOut" }}
             >
-              <div className="text-6xl mb-4">{feature.icon}</div>
+              <motion.div 
+                className="text-6xl mb-4"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.15, type: "spring", stiffness: 200 }}
+              >
+                {feature.icon}
+              </motion.div>
               <h3 className="text-2xl font-semibold text-gray-800">
                 {feature.title}
               </h3>
               <p className="text-gray-700 leading-relaxed text-base">
                 {feature.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

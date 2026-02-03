@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Portraits = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -10,69 +11,88 @@ const Portraits = () => {
     {
       src: "/images/long1.jpg",
       title: "Creative Vision",
-      description: "Exploring the art of visual storytelling",
+      description: "Exploring the Sky",
       category: "Photography",
     },
     {
       src: "/images/long2.jpg",
-      title: "Authentic Moments",
-      description: "Capturing genuine emotions and connections",
+      title: "Shri. Praful K. Patel",
+      description: "Administrator of DNH and Daman and Diu and Lakshwadeep",
       category: "Portrait",
     },
     {
       src: "/images/long3.jpg",
-      title: "Urban Stories",
-      description: "Life through the lens of the city",
+      title: "Shri. Vikram Oberoi",
+      description: "CEO & MD , Oberoi Group",
       category: "Lifestyle",
     },
     {
       src: "/images/long4.jpg",
-      title: "Natural Light",
-      description: "Harnessing the beauty of golden hour",
+      title: "Shri. Ritesh Agarwal",
+      description: "CEO , OYO Hotels & Homes",
       category: "Photography",
     },
-    {
-      src: "/images/long5.jpg",
-      title: "Expressions",
-      description: "Every face tells a unique story",
-      category: "Portrait",
-    },
+   
     {
       src: "/images/long6.jpg",
-      title: "Behind the Scenes",
-      description: "The making of memorable content",
+      title: "Mr.Kai Wegner",
+      description: "Governing Mayor of Berlin.",
       category: "Lifestyle",
     },
     {
       src: "/images/long7.jpg",
-      title: "Editorial Style",
-      description: "Professional photography with personality",
-      category: "Photography",
+      title: "Rajasthan Rising: Building India’s Premier Adventure Tourism Destination",
+      description: "in the presence of Hon’ble Chief Minister Shri Bhajan Lal Sharma Ji",
+      category: "Guest Speaker",
     },
   ];
 
   return (
     <section className="w-full bg-slate-50 py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 mb-12">
-        <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-gray-800 mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             Portrait Gallery
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="text-gray-600 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             A collection of portraits and moments that capture the essence of
             storytelling
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
 
       {/* Scrolling Carousel */}
-      <div className="relative">
+      <motion.div 
+        className="relative"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="flex gap-6 animate-scroll-left hover:pause-animation">
           {/* Duplicate the array to create seamless loop */}
           {[...portraits, ...portraits].map((portrait, index) => (
             <div
               key={index}
-              className="relative flex-shrink-0 w-80 h-96 group cursor-pointer"
+              className="relative shrink-0 w-80 h-96 group cursor-pointer"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -85,7 +105,7 @@ const Portraits = () => {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
               </div>
 
               {/* Info Card - Always visible at bottom, expands on hover */}
@@ -119,7 +139,7 @@ const Portraits = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       <style jsx>{`
         @keyframes scroll-left {

@@ -17,7 +17,7 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <a
-                href="mailto:contact@captchouhan.com"
+                href="mailto:Capt.permisure@gmail.com"
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <svg
@@ -27,10 +27,10 @@ const Footer = () => {
                 >
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
-                contact@captchouhan.com
+                Capt.permisure@gmail.com
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+918097407474"
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <svg
@@ -40,7 +40,7 @@ const Footer = () => {
                 >
                   <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                 </svg>
-                +91 98765 43210
+                +91 809 740 7474
               </a>
             </div>
           </div>
@@ -51,7 +51,7 @@ const Footer = () => {
             <div className="flex gap-4">
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/capt.chouhan/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 flex items-center justify-center transition-all duration-300"
@@ -67,7 +67,7 @@ const Footer = () => {
 
               {/* YouTube */}
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@CaptMChouhan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-red-600 flex items-center justify-center transition-all duration-300"
@@ -81,25 +81,9 @@ const Footer = () => {
                 </svg>
               </a>
 
-              {/* Twitter/X */}
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-black flex items-center justify-center transition-all duration-300"
-              >
-                <svg
-                  className="w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/capt-m-chouhan-7b3367aa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition-all duration-300"

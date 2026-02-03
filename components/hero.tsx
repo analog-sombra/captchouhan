@@ -1,10 +1,20 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+  const router = useRouter();
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
       {/* Background Image with Darker Overlay */}
-      <div className="absolute inset-0">
+      <motion.div 
+        className="absolute inset-0"
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <Image
           src="/images/home_bg.jpg"
           fill
@@ -13,45 +23,85 @@ const Hero = () => {
           priority
         />
         {/* Darker Overlay */}
-        <div className="absolute inset-0 bg-black/70" />
-      </div>
+        <motion.div 
+          className="absolute inset-0 bg-black/70"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        />
+      </motion.div>
 
       {/* Content Container */}
       <div className="relative z-10 h-full max-w-7xl mx-auto px-4">
         <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          
           {/* Left Side - Text Content */}
           <div className="text-left lg:pl-8 pt-20 lg:pt-0">
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <motion.h1 
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
               Capt. M. Chouhan
-            </h1>
-            
+            </motion.h1>
+
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-gray-200 mb-4 font-light">
+            <motion.p 
+              className="text-xl md:text-2xl text-gray-200 mb-4 font-light"
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
               Content Creator • Live Streamer • Digital Storyteller
-            </p>
-            
+            </motion.p>
+
             {/* Description */}
-            <p className="text-base md:text-lg text-gray-300 max-w-xl mb-10 leading-relaxed">
-              Creating meaningful connections through authentic content and engaging stories
-              that inspire, educate, and entertain audiences worldwide.
-            </p>
+            <motion.p 
+              className="text-base md:text-lg text-gray-300 max-w-xl mb-10 leading-relaxed"
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+            >
+              Creating meaningful connections through authentic content and
+              engaging stories that inspire, educate, and entertain audiences
+              worldwide.
+            </motion.p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <button className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+            <motion.div 
+              className="flex flex-wrap gap-4"
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+            >
+              <button
+                onClick={() => {
+                  router.push("/#gallery");
+                }}
+                className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
                 View My Work
               </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
+              <button
+                onClick={() => {
+                  router.push("/#footer");
+                }}
+                className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
+              >
                 Get In Touch
               </button>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Side - Person Image */}
-          <div className="relative h-full flex items-end justify-center lg:justify-end">
-            <div className="relative w-full max-w-lg h-[80vh] lg:h-full">
+          <div className="relative h-full lg:flex items-end justify-center lg:justify-end hidden ">
+            <motion.div 
+              className="relative w-full max-w-lg h-[80vh] lg:h-full"
+              initial={{ x: 80, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
               <Image
                 src="/images/person.png"
                 fill
@@ -59,13 +109,17 @@ const Hero = () => {
                 className="object-contain object-bottom"
                 priority
               />
-            </div>
+            </motion.div>
           </div>
-
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <motion.div 
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
+        >
           <svg
             className="w-6 h-6 text-white"
             fill="none"
@@ -79,7 +133,7 @@ const Hero = () => {
               d="M19 14l-7 7m0 0l-7-7m7 7V3"
             />
           </svg>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
