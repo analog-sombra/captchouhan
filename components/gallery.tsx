@@ -91,7 +91,7 @@ const Gallery = () => {
             viewport={{ amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Gallery
+            Project Gallery
           </motion.h2>
           <motion.p
             className="text-gray-600 max-w-2xl mx-auto"
@@ -100,7 +100,8 @@ const Gallery = () => {
             viewport={{ amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            A visual journey through our creative moments and milestones
+            A visual journey through large-scale experiential projects,
+            government collaborations, and destination development milestone
           </motion.p>
         </motion.div>
 

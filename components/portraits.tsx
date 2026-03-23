@@ -32,7 +32,7 @@ const Portraits = () => {
       description: "CEO , OYO Hotels & Homes",
       category: "Photography",
     },
-   
+
     {
       src: "/images/long6.jpg",
       title: "Mr.Kai Wegner",
@@ -41,8 +41,10 @@ const Portraits = () => {
     },
     {
       src: "/images/long7.jpg",
-      title: "Rajasthan Rising: Building India’s Premier Adventure Tourism Destination",
-      description: "in the presence of Hon’ble Chief Minister Shri Bhajan Lal Sharma Ji",
+      title:
+        "Rajasthan Rising: Building India’s Premier Adventure Tourism Destination",
+      description:
+        "in the presence of Hon’ble Chief Minister Shri Bhajan Lal Sharma Ji",
       category: "Guest Speaker",
     },
   ];
@@ -50,37 +52,37 @@ const Portraits = () => {
   return (
     <section className="w-full bg-slate-50 py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 mb-12">
-        <motion.div 
+        <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl font-bold text-gray-800 mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Portrait Gallery
+            Leadership Moments
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-gray-600 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            A collection of portraits and moments that capture the essence of
-            storytelling
+            A collection of strategic engagements and field moments that reflect
+            execution, partnerships, and high-value project leadership.
           </motion.p>
         </motion.div>
       </div>
 
       {/* Scrolling Carousel */}
-      <motion.div 
+      <motion.div
         className="relative"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}

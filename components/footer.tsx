@@ -7,8 +7,9 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Capt. M. Chouhan</h3>
             <p className="text-gray-400 leading-relaxed">
-              Creating meaningful content and connecting with audiences through
-              authentic storytelling and creative expression.
+              Available for strategic collaborations, government-backed
+              initiatives, destination development, and high-value experiential
+              projects.
             </p>
           </div>
 
@@ -17,7 +18,7 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4">Contact</h4>
             <div className="space-y-3">
               <a
-                href="mailto:Capt.permisure@gmail.com"
+                href="mailto:captchouhan@gmail.com"
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <svg
@@ -27,7 +28,7 @@ const Footer = () => {
                 >
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
-                Capt.permisure@gmail.com
+                captchouhan@gmail.com
               </a>
               <a
                 href="tel:+918097407474"

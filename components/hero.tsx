@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden">
       {/* Background Image with Darker Overlay */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0"
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -23,7 +23,7 @@ const Hero = () => {
           priority
         />
         {/* Darker Overlay */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-black/70"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -37,7 +37,7 @@ const Hero = () => {
           {/* Left Side - Text Content */}
           <div className="text-left lg:pl-8 pt-20 lg:pt-0">
             {/* Main Heading */}
-            <motion.h1 
+            <motion.h1
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -47,29 +47,29 @@ const Hero = () => {
             </motion.h1>
 
             {/* Subtitle */}
-            <motion.p 
-              className="text-xl md:text-2xl text-gray-200 mb-4 font-light"
+            <motion.p
+              className="text-xl text-gray-200 mb-4 font-light"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Content Creator • Live Streamer • Digital Storyteller
+              Experiential Projects | Government Liaison | Complex Mission
             </motion.p>
 
             {/* Description */}
-            <motion.p 
+            <motion.p
               className="text-base md:text-lg text-gray-300 max-w-xl mb-10 leading-relaxed"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              Creating meaningful connections through authentic content and
-              engaging stories that inspire, educate, and entertain audiences
-              worldwide.
+              Leading high-value experiential projects, government partnerships,
+              and destination initiatives for global brands, luxury hospitality
+              groups, and public institutions.
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div 
+            <motion.div
               className="flex flex-wrap gap-4"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -96,7 +96,7 @@ const Hero = () => {
 
           {/* Right Side - Person Image */}
           <div className="relative h-full lg:flex items-end justify-center lg:justify-end hidden ">
-            <motion.div 
+            <motion.div
               className="relative w-full max-w-lg h-[80vh] lg:h-full"
               initial={{ x: 80, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -114,7 +114,7 @@ const Hero = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

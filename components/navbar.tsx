@@ -17,13 +17,13 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#expertise" },
-    { name: "Portraits", href: "#portraits" },
-    { name: "Instagram", href: "#instagram" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Features", href: "#features" },
-    { name: "Contact", href: "#footer" },
+    { name: "Overview", href: "#home" },
+    { name: "Profile", href: "#expertise" },
+    { name: "Leadership", href: "#portraits" },
+    { name: "Updates", href: "#instagram" },
+    { name: "Projects", href: "#gallery" },
+    { name: "Capabilities", href: "#features" },
+    { name: "Connect", href: "#footer" },
   ];
 
   return (
@@ -62,7 +62,11 @@ const Navbar = () => {
                 }`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.4, delay: 0.2 + index * 0.05, ease: "easeOut" }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.2 + index * 0.05,
+                  ease: "easeOut",
+                }}
               >
                 {link.name}
               </motion.a>

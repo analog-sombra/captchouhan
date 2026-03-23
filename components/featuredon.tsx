@@ -41,14 +41,17 @@ const FeaturedOn = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-gray-800">Featured On</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-800">
+            Strategic Engagements
+          </h2>
           <p className="text-xl text-gray-700 mb-3">
-            Making a lasting impact, together.
+            Delivering visible impact through government-backed initiatives,
+            destination experiences, and high-value collaborations.
           </p>
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Here&apos;s a collection of sharables that you can send to people
-            and connect with them on this journey of nourishing mind and
-            enriching lives.
+            A collection of case studies, media coverage, and project references
+            demonstrating execution across ministries, global teams, and premium
+            brands.
           </p>
         </div>
 
@@ -74,13 +77,16 @@ const FeaturedOn = () => {
 
             {/* Main Person Image */}
             <div className="relative w-60 h-120 z-10 rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/profile.jpg"
-                fill
-                alt="Featured Person"
-                className="object-cover object-center"
-                priority
-              />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-cover object-center"
+              >
+                <source src="/linkedin.mp4" type="video/mp4" />
+              </video>
             </div>
 
             {/* Right Floating Images */}
@@ -106,13 +112,16 @@ const FeaturedOn = () => {
         <div className="lg:hidden space-y-8">
           {/* Main Image */}
           <div className="relative w-full max-w-md mx-auto h-96 rounded-2xl overflow-hidden shadow-2xl">
-            <Image
-              src="/images/profile.jpg"
-              fill
-              alt="Featured Person"
-              className="object-cover object-center"
-              priority
-            />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover object-center"
+            >
+              <source src="/linkedin.mp4" type="video/mp4" />
+            </video>
           </div>
 
           {/* Grid of All Images */}
