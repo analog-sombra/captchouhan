@@ -12,32 +12,27 @@ const Portraits = () => {
       src: "/images/long1.jpg",
       title: "Creative Vision",
       description: "Exploring the Sky",
-      category: "Photography",
     },
     {
       src: "/images/long2.jpg",
       title: "Shri. Praful K. Patel",
       description: "Administrator of DNH and Daman and Diu and Lakshwadeep",
-      category: "Portrait",
     },
     {
       src: "/images/long3.jpg",
       title: "Shri. Vikram Oberoi",
       description: "CEO & MD , Oberoi Group",
-      category: "Lifestyle",
     },
     {
       src: "/images/long4.jpg",
       title: "Shri. Ritesh Agarwal",
       description: "CEO , OYO Hotels & Homes",
-      category: "Photography",
     },
 
     {
       src: "/images/long6.jpg",
       title: "Mr.Kai Wegner",
       description: "Governing Mayor of Berlin.",
-      category: "Lifestyle",
     },
     {
       src: "/images/long7.jpg",
@@ -45,7 +40,6 @@ const Portraits = () => {
         "Rajasthan Rising: Building India’s Premier Adventure Tourism Destination",
       description:
         "in the presence of Hon’ble Chief Minister Shri Bhajan Lal Sharma Ji",
-      category: "Guest Speaker",
     },
   ];
 
@@ -114,13 +108,10 @@ const Portraits = () => {
               <div
                 className={`absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 ${
                   hoveredIndex === index
-                    ? "bg-black/90 backdrop-blur-sm"
+                    ? "bg-transparent"
                     : "bg-transparent"
                 }`}
               >
-                <span className="text-xs font-semibold text-gray-300 uppercase tracking-wide">
-                  {portrait.category}
-                </span>
                 <h3 className="text-xl font-bold mt-1 mb-2">
                   {portrait.title}
                 </h3>
